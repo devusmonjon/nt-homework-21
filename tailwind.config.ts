@@ -9,9 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        linear: "linear-gradient(155deg, #383638 2.06%, #0B0B0B 33.08%)",
+        skeleton: "linear-gradient(90deg, #ddd, #f8f8f8, #ddd)",
+      },
+      animation: {
+        skeleton: "skeleton 1s infinite linear",
+      },
+      keyframes: {
+        skeleton: {
+          to: {
+            backgroundPosition: "-200%",
+          },
+        },
       },
     },
   },
