@@ -46,3 +46,11 @@ html {
 .slick-dots li.slick-active button {
     background: #3858D6 !important;
 }
+
+.card-icons {
+  transition: all .3s ease;
+}
+
+.card:hover .card-icons {
+  opacity: 1;
+}
