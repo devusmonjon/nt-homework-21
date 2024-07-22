@@ -54,3 +54,7 @@ html {
 .card:hover .card-icons {
   opacity: 1;
 }
+
+.card-image-div:hover .card-image {
+  scale: 1.2;
+}

@@ -11,6 +11,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Link from "next/link";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -275,8 +276,8 @@ const Page = (props: Props) => {
                           </div>
                         </button>
                       </div>
-                      <div className='w-full h-[337px] bg-[#F6F6F6] flex justify-center items-center overflow-hidden cursor-pointer'>
-                        <div className='w-[250px] h-[280.032px] rounded-[25px] relative hover:scale-[1.2] transition-all duration-500 ease-[cubic-bezier(.47,0,.74,.71)]'>
+                      <Link href={`/products/${product.id}`} className='w-full h-[337px] bg-[#F6F6F6] flex justify-center items-center overflow-hidden cursor-pointer card-image-div'>
+                        <div className='w-[250px] h-[280.032px] rounded-[25px] relative card-image transition-all duration-500 ease-[cubic-bezier(.47,0,.74,.71)]'>
                           <Image
                             src={product.thumbnail}
                             fill
@@ -284,7 +285,7 @@ const Page = (props: Props) => {
                             alt={"image"}
                           />
                         </div>
-                      </div>
+                      </Link>
                       <h1
                         className={`text-center text-[#1E1D1D] text-[24px] font-semibold mt-[11px]`}
                         title={product.title}
