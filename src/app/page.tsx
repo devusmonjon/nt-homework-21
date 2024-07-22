@@ -220,7 +220,7 @@ const Page = (props: Props) => {
                               fill='none'
                               xmlns='http://www.w3.org/2000/svg'
                             >
-                              <g clip-path='url(#clip0_18_119)'>
+                              <g clipPath='url(#clip0_18_119)'>
                                 <path
                                   d='M8.25 20.1667C8.75626 20.1667 9.16667 19.7563 9.16667 19.25C9.16667 18.7438 8.75626 18.3334 8.25 18.3334C7.74374 18.3334 7.33334 18.7438 7.33334 19.25C7.33334 19.7563 7.74374 20.1667 8.25 20.1667Z'
                                   stroke='white'
@@ -255,8 +255,8 @@ const Page = (props: Props) => {
                             </svg>
                           </div>
                         </button>
-                        <button className="w-[38px] h-[38px] rounded-full bg-[#FF6B6B] outline-none grid place-items-center mt-2">
-                          <div className="w-[23px] h-[21px] grid place-items-center">
+                        <button className='w-[38px] h-[38px] rounded-full bg-[#FF6B6B] outline-none grid place-items-center mt-2'>
+                          <div className='w-[23px] h-[21px] grid place-items-center'>
                             <svg
                               width='23'
                               height='21'
@@ -276,7 +276,10 @@ const Page = (props: Props) => {
                           </div>
                         </button>
                       </div>
-                      <Link href={`/products/${product.id}`} className='w-full h-[337px] bg-[#F6F6F6] flex justify-center items-center overflow-hidden cursor-pointer card-image-div'>
+                      <Link
+                        href={`/products/${product.id}`}
+                        className='w-full h-[337px] bg-[#F6F6F6] flex justify-center items-center overflow-hidden cursor-pointer card-image-div'
+                      >
                         <div className='w-[250px] h-[280.032px] rounded-[25px] relative card-image transition-all duration-500 ease-[cubic-bezier(.47,0,.74,.71)]'>
                           <Image
                             src={product.thumbnail}
@@ -286,14 +289,15 @@ const Page = (props: Props) => {
                           />
                         </div>
                       </Link>
-                      <h1
+                      <Link
+                        href={`/products/${product.id}`}
                         className={`text-center text-[#1E1D1D] text-[24px] font-semibold mt-[11px]`}
                         title={product.title}
                       >
                         {product.title.length < 16
                           ? product.title
                           : product.title.slice(0, 16) + "..."}
-                      </h1>
+                      </Link>
                       <ReactStars
                         count={5}
                         onChange={() => null}
